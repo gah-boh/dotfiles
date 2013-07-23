@@ -11,9 +11,19 @@ link() {
 	ln -s "$from" "$to"
 }
 
+linkTemplates() {
+	link "$files/templates/spagSnippets_JavaScript.xml" "$webstorm/templates/spagSnippets_JavaScript.xml"
+}
+
 if [[ -d "$webstorm" ]]; then
 	echo "Linking WebStorm JavaScript snippets..."
-	link "$files/templates/spagSnippets_JavaScript.xml" "$webstorm/templates/spagSnippets_JavaScript.xml"
+	if [[ -d "$webstorm/templates/" ]]; then
+		linkTemplates
+	else
+		echo "Creating templates folder, it doesn't exist."
+		mkdir "$webstorm/templates"
+		linkTemplates
+	fi
 else
 	echo "WebStorm preferences not present. Install the app or start it if you haven't already."
 fi
