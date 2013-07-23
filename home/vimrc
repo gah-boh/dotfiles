@@ -1,0 +1,23 @@
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
+
+filetype plugin indent on " Enable filetype-specific indenting and plugins
+
+syntax on
+
+set number
+set nocompatible
+set backspace=indent,eol,start
+set history=500
+set ruler
+set autoindent
+set smarttab
+set showmatch
+set autoread
+set tabstop=4
+set shiftwidth=4
+

@@ -1,0 +1,20 @@
+{
+	"auto_complete_selector": "source - comment, meta.tag - punctuation.definition.tag.begin",
+	"caret_style": "phase",
+	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+	"colored_folder_glyphs": false,
+	"disable_colored_group_labels": true,
+	"disable_colored_folder_labels": true,
+	"font_face": "Source Code Pro",
+	"font_size": 13.0,
+	"highlight_line": true,
+	"highlight_modified_tabs": true,
+	"ignored_packages":
+	[
+	],
+	"theme": "Nil.sublime-theme",
+	"vintage_start_in_command_mode": true,
+	"vintage_lines.force_mode": true,
+	"wide_caret": true,
+	"word_wrap": false
+}
