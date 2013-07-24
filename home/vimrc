@@ -4,6 +4,7 @@ call vundle#rc()
 " let Vundle manage Vundle
 " required! 
 Bundle 'gmarik/vundle'
+Bundle 'delimitMate.vim'
 
 filetype plugin indent on " Enable filetype-specific indenting and plugins
 

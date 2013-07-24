@@ -3,6 +3,13 @@
 files="$HOME/Documents/dotfiles"
 sublime="$HOME/Library/Application Support/Sublime Text 2/Packages"
 
+if [[ -d "$files/sublimeText" ]]; then
+	echo "Symlinking sublime text settings from $files/sublimeText"
+else
+	echo "$files/sublimeText does not exist."
+	exit 1
+fi
+
 link() {
 	from="$1"
 	to="$2"

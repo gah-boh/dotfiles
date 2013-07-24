@@ -3,6 +3,13 @@
 files="$HOME/Documents/dotfiles/webstorm"
 webstorm="$HOME/Library/Preferences/Webstorm6"
 
+if [[ -d "$files" ]]; then
+	echo "Symlinking dotfiles from $files"
+else
+	echo "$files does not exist."
+	exit 1
+fi
+
 link() {
 	from="$1"
 	to="$2"
