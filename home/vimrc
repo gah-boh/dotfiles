@@ -5,6 +5,8 @@ call vundle#rc()
 " required! 
 Bundle 'gmarik/vundle'
 Bundle 'delimitMate.vim'
+Bundle "pangloss/vim-javascript"
+Bundle "scroolose/nerdtree"
 
 filetype plugin indent on " Enable filetype-specific indenting and plugins
 
@@ -18,6 +20,7 @@ set ruler
 set autoindent
 set smarttab
 set showmatch
+set splitright
 set autoread
 set tabstop=4
 set shiftwidth=4
