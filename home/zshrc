@@ -44,8 +44,5 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-#Aliases
-alias ls="ls -lG"
-
 # Customize to your needs...
 export PATH=$PATH:/usr/local/git/bin:/Users/gabo/.rvm/gems/ruby-2.0.0-p0/bin:/Users/gabo/.rvm/gems/ruby-2.0.0-p0@global/bin:/Users/gabo/.rvm/rubies/ruby-2.0.0-p0/bin:/Users/gabo/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
