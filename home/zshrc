@@ -40,9 +40,10 @@ ZSH_THEME="robbyrussell"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
+plugins=(git mercurial)
 
 source $ZSH/oh-my-zsh.sh
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Customize to your needs...
-export PATH=$PATH:/usr/local/git/bin:/Users/gabo/.rvm/gems/ruby-2.0.0-p0/bin:/Users/gabo/.rvm/gems/ruby-2.0.0-p0@global/bin:/Users/gabo/.rvm/rubies/ruby-2.0.0-p0/bin:/Users/gabo/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
+export PATH=$PATH:/usr/local/git/bin:/Users/gabo-summa/.rvm/gems/ruby-1.9.2-p320/bin:/Users/gabo-summa/.rvm/gems/ruby-1.9.2-p320@global/bin:/Users/gabo-summa/.rvm/rubies/ruby-1.9.2-p320/bin:/Users/gabo-summa/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
