@@ -6,8 +6,8 @@ webstorm="$HOME/Library/Preferences/Webstorm6"
 if [[ -d "$files" ]]; then
 	echo "Symlinking dotfiles from $files"
 else
-	echo "$files does not exist."
-	exit 1
+	echo "WARNING: $files does not exist."
+	exit 0
 fi
 
 link() {
