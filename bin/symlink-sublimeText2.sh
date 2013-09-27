@@ -20,7 +20,7 @@ link() {
 
 linkSublimePreferences() {
 	echo "Linking preferences..."
-	for location in sublimeText/*.*; do
+	for location in sublimeText2/*.*; do
 		file="${location##*/}"
 		link "$files/$location" "$sublime/User/$file"
 	done
@@ -28,7 +28,7 @@ linkSublimePreferences() {
 
 linkSublimeSpagSnippets() {
 	echo "Linking spagSnippets..."
-	for location in sublimeText/spagSnippets/*.*; do
+	for location in sublimeText2/spagSnippets/*.*; do
 		file="${location##*/}"
 		link "$files/$location" "$sublime/spagSnippets/$file"
 	done
