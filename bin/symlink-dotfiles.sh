@@ -5,7 +5,7 @@ dotfiles="$HOME/Documents/dotfiles"
 if [[ -d "$dotfiles" ]]; then
 	echo "Symlinking dotfiles from $dotfiles"
 else
-	echo "$dotfiles does not exist."
+	echo "WARNING: $dotfiles does not exist."
 	exit 1
 fi
 
