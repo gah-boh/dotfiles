@@ -2,7 +2,7 @@
 	{"keys": ["shift+super+u"], "command": "toggle_setting", "args": {"setting": "vintage_lines.force_mode"}},
 
 	{
-		"keys": ["super+alt+left"],
+		"keys": ["ctrl+alt+left"],
 		"command": "set_layout",
 		"args":
 		{
@@ -13,7 +13,7 @@
 	},
 
 	{
-		"keys": ["super+alt+right"],
+		"keys": ["ctrl+alt+right"],
 		"command": "set_layout",
 		"args":
 		{
