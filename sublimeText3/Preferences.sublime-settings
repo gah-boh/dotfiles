@@ -1,4 +1,6 @@
 {
+	// Sublime Default
+    "caret_style": "phase",
 	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
 	"font_face": "Source Code Pro",
 	"font_size": 13.0,
@@ -7,5 +9,10 @@
 	"ignored_packages":
 	[
 		"Vintage"
-	]
+	],
+
+	// Nil theme stuff
+	"colored_folder_glyphs": false, 
+	"disable_colored_folder_labels": true,
+	"disable_colored_group_labels": true
 }
