@@ -1,6 +1,7 @@
 #!/bin/bash
 
 files="$HOME/Documents/dotfiles"
+sublimeGeneralSnippets="$HOME/Documents/dotfiles/sublimeGeneral/spagSnippets"
 sublime="$HOME/Library/Application Support/Sublime Text 2/Packages"
 
 if [[ -d "$files/sublimeText2" ]]; then
@@ -26,17 +27,34 @@ linkSublimePreferences() {
 	done
 }
 
+if [[ -d "$sublime" ]]; then
+	linkSublimePreferences
+else
+	echo "No Sublime Text Preferences install or start the app"
+fi
+
+
+if [[ -d "$files/sublimeGeneral" ]]; then
+	echo "Symlinking sublime text spagSnippets from $files/sublimeGeneral"
+else
+	echo "WARNING: $files/sublimeGeneral does not exist."
+	exit 0
+fi
+
 linkSublimeSpagSnippets() {
 	echo "Linking spagSnippets..."
-	for location in sublimeText2/spagSnippets/*.*; do
+	for location in sublimeGeneral/spagSnippets/*.*; do
 		file="${location##*/}"
 		link "$files/$location" "$sublime/spagSnippets/$file"
 	done
 }
 
-if [[ -d "$sublime" ]]; then
-	linkSublimePreferences
+if [[ ! -d "$sublime/spagSnippets" ]]; then
+	mkdir "$sublime/spagSnippets"
+fi
+
+if [[ -d "$sublimeGeneralSnippets" ]]; then
 	linkSublimeSpagSnippets
 else
-	echo "No Sublime Text Preferences install or start the app"
+	echo "No Sublime Text spagSnippets."
 fi
