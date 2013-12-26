@@ -6,6 +6,7 @@
 	"font_size": 13.0,
 	"highlight_modified_tabs": true,
 	"theme": "Nil.sublime-theme",
+    "word_wrap": "false",
 	"ignored_packages":
 	[
 		"Vintage"
