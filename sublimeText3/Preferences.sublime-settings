@@ -11,6 +11,7 @@
 	[
 		"Vintage"
 	],
+	"word_wrap": false,
 
 	// Nil theme stuff
 	"colored_folder_glyphs": false, 
