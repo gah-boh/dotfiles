@@ -43,7 +43,6 @@ ZSH_THEME="bureau"
 plugins=(git mercurial sublime zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Customize to your needs...
 export PATH=$PATH:/usr/local/git/bin:/Users/gabo-summa/.rvm/gems/ruby-1.9.2-p320/bin:/Users/gabo-summa/.rvm/gems/ruby-1.9.2-p320@global/bin:/Users/gabo-summa/.rvm/rubies/ruby-1.9.2-p320/bin:/Users/gabo-summa/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
