@@ -44,5 +44,10 @@ plugins=(git mercurial sublime zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
+#Source rvm script
+source ~/.rvm/scripts/rvm
+
 # Customize to your needs...
 export PATH=$PATH:/usr/local/git/bin:/Users/gabo-summa/.rvm/gems/ruby-1.9.2-p320/bin:/Users/gabo-summa/.rvm/gems/ruby-1.9.2-p320@global/bin:/Users/gabo-summa/.rvm/rubies/ruby-1.9.2-p320/bin:/Users/gabo-summa/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
