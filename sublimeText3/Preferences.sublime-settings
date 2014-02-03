@@ -1,21 +1,16 @@
 {
-	// Sublime Default
-    "caret_style": "phase",
+	"caret_style": "phase",
 	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+	"flatland_sidebar_tree_xsmall": true,
+	"flatland_square_tabs": true,
 	"font_face": "Source Code Pro",
 	"font_size": 13.0,
 	"highlight_modified_tabs": true,
-	"show_full_path": true,
-	"theme": "Nil.sublime-theme",
-    "word_wrap": "false",
 	"ignored_packages":
 	[
 		"Vintage"
 	],
-	"word_wrap": false,
-
-	// Nil theme stuff
-	"colored_folder_glyphs": false, 
-	"disable_colored_folder_labels": true,
-	"disable_colored_group_labels": true
+	"show_full_path": true,
+	"theme": "Flatland Dark.sublime-theme",
+	"word_wrap": false
 }
