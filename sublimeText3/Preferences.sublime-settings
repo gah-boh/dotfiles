@@ -1,8 +1,6 @@
 {
 	"caret_style": "phase",
-	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
-	"flatland_sidebar_tree_xsmall": true,
-	"flatland_square_tabs": true,
+	"color_scheme": "Packages/Solarized Color Scheme/Solarized (dark).tmTheme",
 	"font_face": "Source Code Pro",
 	"font_size": 13.0,
 	"highlight_modified_tabs": true,
@@ -11,6 +9,6 @@
 		"Vintage"
 	],
 	"show_full_path": true,
-	"theme": "Flatland Dark.sublime-theme",
+	"theme": "Solarized Dark.sublime-theme",
 	"word_wrap": false
 }

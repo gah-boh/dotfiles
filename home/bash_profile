@@ -13,3 +13,5 @@ export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 # Aliases
 alias ls='ls -Gpl'
 alias clera='clear'
+
+[[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh # This loads NVM
