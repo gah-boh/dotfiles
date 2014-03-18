@@ -1,6 +1,7 @@
 {
 	"caret_style": "phase",
-	"color_scheme": "Packages/User/Solarized (dark) (SL).tmTheme",
+	"color_scheme": "Packages/Solarized Color Scheme/Solarized (dark).tmTheme",
+	"detect_indentation": true,
 	"font_face": "Source Code Pro",
 	"font_size": 13.0,
 	"highlight_modified_tabs": true,

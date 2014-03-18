@@ -10,6 +10,7 @@ ZSH_THEME="bureau"
 # Aliases
 alias zshconfig="vim ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias hglog="hg log | less"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
