@@ -9,5 +9,3 @@ echo "Symlinking Sublime Text 2..."
 echo "Symlinking Sublime Text 3..."
 	source "bin/symlink-sublimeText3.sh"
 	
-echo "Symlinking Webstrom 6..."
-	source "bin/symlink-webstorm.sh"
