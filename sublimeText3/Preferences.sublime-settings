@@ -11,6 +11,6 @@
 	],
 	"show_full_path": true,
 	"theme": "Solarized Dark.sublime-theme",
-	"vintage_lines.force_mode": true,
+	"vintage_lines.force_mode": false,
 	"word_wrap": false
 }
