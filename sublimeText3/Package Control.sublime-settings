@@ -1,0 +1,31 @@
+{
+	"installed_packages":
+	[
+		"AdvancedNewFile",
+		"AngularJS",
+		"Better CoffeeScript",
+		"BracketHighlighter",
+		"ColorPicker",
+		"Emmet",
+		"Git",
+		"GitGutter",
+		"Handlebars",
+		"HTMLBeautify",
+		"LESS",
+		"Markdown Preview",
+		"Origami",
+		"Pretty JSON",
+		"Sass",
+		"SideBarEnhancements",
+		"Solarized Color Scheme",
+		"SublimeLinter",
+		"SublimeLinter-jshint",
+		"SublimeLinter-jsxhint",
+		"SublimeREPL",
+		"Theme - Spacegray",
+		"Vintage-Origami",
+		"VintageLines",
+		"Vintageous",
+		"VintageousOrigami"
+	]
+}
