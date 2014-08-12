@@ -1,17 +1,24 @@
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " let Vundle manage Vundle
 " required! 
-Bundle 'gmarik/vundle'
-Bundle 'delimitMate.vim'
-Bundle "pangloss/vim-javascript"
-Bundle "scrooloose/nerdtree"
-Bundle "mattn/emmet-vim"
-Bundle "plasticboy/vim-markdown"
-Bundle "altercation/vim-colors-solarized"
+Plugin 'gmarik/Vundle.vim'
+Plugin 'delimitMate.vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'scrooloose/nerdtree'
+Plugin 'mattn/emmet-vim'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'Keithbsmiley/swift.vim'
 
-filetype plugin indent on " Enable filetype-specific indenting and plugins
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
 
 syntax on
 
@@ -31,8 +38,3 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 
-" MacVim
-set guioptions-=r
-
-" Vim Markdown
-let g:vim_markdown_folding_disabled=1
