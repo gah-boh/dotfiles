@@ -9,12 +9,20 @@ call vundle#begin()
 " required! 
 Plugin 'gmarik/Vundle.vim'
 Plugin 'delimitMate.vim'
-Plugin 'pangloss/vim-javascript'
+Plugin 'jelera/vim-javascript-syntax'
 Plugin 'scrooloose/nerdtree'
 Plugin 'mattn/emmet-vim'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'Keithbsmiley/swift.vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'wookiehangover/jshint.vim'
+Plugin 'wesQ3/vim-windowswap'
+Plugin 'Yggdroot/indentLine'
+Plugin 'tpope/vim-surround'
+Plugin 'MarcWeber/vim-addon-mw-utils' " required for vim-snipmate
+Plugin 'tomtom/tlib_vim' " required for vim-snipmate
+Plugin 'garbas/vim-snipmate'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -22,6 +30,8 @@ filetype plugin indent on    " required
 
 syntax on
 
+set guifont=Source\ Code\ Pro:h12
+set noswapfile
 set nowrap
 set number
 set nocompatible
@@ -37,4 +47,42 @@ set autoread
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
+set nornu " no relative line numbers as default
+set hidden
+set listchars=tab:▸\ 
+
+set noerrorbells 
+set novisualbell
+set t_vb=
+autocmd! GUIEnter * set vb t_vb=
+
+" Vim Markdown
+let g:vim_markdown_folding_disabled=1
+
+" NERDTree
+let g:NERDTreeWinSize=40
+
+" SHORTCUTS =================================
+
+function! g:ToggleNuMode() 
+	if(&rnu == 1) 
+		set nornu 
+	else 
+		set rnu 
+	endif 
+endfunc 
+
+nnoremap <leader>l :call g:ToggleNuMode()<cr> 
+
+" Window Navigation Shortcuts
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" NERDTree Toggle Shortcut
+nnoremap <C-n> :NERDTreeToggle<CR>
+
+" SnipMate Extension Shortcut
+imap <C-J> <Plug>snipMateNextOrTrigger
 

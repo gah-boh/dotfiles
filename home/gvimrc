@@ -1,11 +1,9 @@
 " MacVim
 set guioptions-=r
-
-" Vim Markdown
-let g:vim_markdown_folding_disabled=1
-
-set guifont=Source\ Code\ Pro:h11
+set guioptions-=T
+set go-=L
 
 " Solarized Plugin
 set background=dark
 colorscheme solarized
+
