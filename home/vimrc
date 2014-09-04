@@ -9,7 +9,7 @@ call vundle#begin()
 " required! 
 Plugin 'gmarik/Vundle.vim'
 Plugin 'delimitMate.vim'
-Plugin 'jelera/vim-javascript-syntax'
+Plugin 'pangloss/vim-javascript'
 Plugin 'scrooloose/nerdtree'
 Plugin 'mattn/emmet-vim'
 Plugin 'plasticboy/vim-markdown'
@@ -23,6 +23,10 @@ Plugin 'tpope/vim-surround'
 Plugin 'MarcWeber/vim-addon-mw-utils' " required for vim-snipmate
 Plugin 'tomtom/tlib_vim' " required for vim-snipmate
 Plugin 'garbas/vim-snipmate'
+Plugin 'itchyny/lightline.vim'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'tpope/vim-commentary'
+Plugin 'XadillaX/json-formatter.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -62,6 +66,14 @@ let g:vim_markdown_folding_disabled=1
 " NERDTree
 let g:NERDTreeWinSize=40
 
+" GitGutter
+let g:gitgutter_enabled = 0
+
+" Lightline setup
+let g:lightline = {
+      \ 'colorscheme': 'solarized_dark'
+      \ }
+
 " SHORTCUTS =================================
 
 function! g:ToggleNuMode() 
@@ -82,6 +94,9 @@ nnoremap <C-H> <C-W><C-H>
 
 " NERDTree Toggle Shortcut
 nnoremap <C-n> :NERDTreeToggle<CR>
+
+" GitGutter Toggling
+nnoremap <leader>g :GitGutterToggle<cr> 
 
 " SnipMate Extension Shortcut
 imap <C-J> <Plug>snipMateNextOrTrigger
