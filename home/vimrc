@@ -60,6 +60,11 @@ set novisualbell
 set t_vb=
 autocmd! GUIEnter * set vb t_vb=
 
+" gvim
+set guioptions-=r
+set guioptions-=T
+set go-=L
+
 " Vim Markdown
 let g:vim_markdown_folding_disabled=1
 
