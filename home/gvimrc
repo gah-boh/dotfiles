@@ -1,4 +1,5 @@
 " Solarized Plugin
 set background=dark
 colorscheme solarized
+set highlight CursorLineNr guifg=#839496
 

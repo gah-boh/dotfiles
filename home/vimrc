@@ -11,12 +11,12 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'delimitMate.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'scrooloose/nerdtree'
+Plugin 'Shutnik/jshint2.vim'
 Plugin 'mattn/emmet-vim'
-Plugin 'plasticboy/vim-markdown'
+Plugin 'tpope/vim-markdown'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'Keithbsmiley/swift.vim'
 Plugin 'kien/ctrlp.vim'
-Plugin 'wookiehangover/jshint.vim'
 Plugin 'wesQ3/vim-windowswap'
 Plugin 'Yggdroot/indentLine'
 Plugin 'tpope/vim-surround'
@@ -27,6 +27,8 @@ Plugin 'itchyny/lightline.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-commentary'
 Plugin 'XadillaX/json-formatter.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'terryma/vim-multiple-cursors'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -48,12 +50,15 @@ set smarttab
 set showmatch
 set splitright
 set autoread
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
 set nornu " no relative line numbers as default
 set hidden
 set listchars=tab:▸\ 
+
+" Indentation
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+autocmd FileType html setlocal expandtab " Use spaces for html files
 
 set noerrorbells 
 set novisualbell
@@ -75,12 +80,18 @@ let g:NERDTreeWinSize=40
 let g:gitgutter_enabled = 0
 
 " Lightline setup
+set laststatus=2 " This will make sure it's always visible, not just on vsplits
 let g:lightline = {
       \ 'colorscheme': 'solarized_dark'
       \ }
 
+" JSHint2 settings
+let jshint2_read = 1 " Lint files when opened
+let jshint2_save = 1 " Lint files after saving
+
 " SHORTCUTS =================================
 
+" Relative line numbers toggling
 function! g:ToggleNuMode() 
 	if(&rnu == 1) 
 		set nornu 
@@ -91,6 +102,9 @@ endfunc
 
 nnoremap <leader>l :call g:ToggleNuMode()<cr> 
 
+" Quick buffer access
+nnoremap <F5> :buffers<CR>:buffer<Space>
+
 " Window Navigation Shortcuts
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -98,7 +112,7 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 " NERDTree Toggle Shortcut
-nnoremap <C-n> :NERDTreeToggle<CR>
+nnoremap <C-g> :NERDTreeToggle<CR>
 
 " GitGutter Toggling
 nnoremap <leader>g :GitGutterToggle<cr> 
