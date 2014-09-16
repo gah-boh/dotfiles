@@ -13,7 +13,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Shutnik/jshint2.vim'
 Plugin 'mattn/emmet-vim'
-Plugin 'tpope/vim-markdown'
+Plugin 'plasticboy/vim-markdown'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'Keithbsmiley/swift.vim'
 Plugin 'kien/ctrlp.vim'
@@ -29,6 +29,8 @@ Plugin 'tpope/vim-commentary'
 Plugin 'XadillaX/json-formatter.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'terryma/vim-multiple-cursors'
+Plugin 'tpope/vim-unimpaired'
+Plugin 'tpope/vim-repeat'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -38,7 +40,6 @@ syntax on
 
 set guifont=Source\ Code\ Pro:h12
 set noswapfile
-set nowrap
 set number
 set nocompatible
 set backspace=indent,eol,start
@@ -60,6 +61,10 @@ set softtabstop=4
 set shiftwidth=4
 autocmd FileType html setlocal expandtab " Use spaces for html files
 
+" Wrapping
+set nowrap
+autocmd FileType markdown,mkd setlocal wrap
+
 set noerrorbells 
 set novisualbell
 set t_vb=
@@ -69,6 +74,8 @@ autocmd! GUIEnter * set vb t_vb=
 set guioptions-=r
 set guioptions-=T
 set go-=L
+
+set tags=tags;/ " Recursively search for a tag file in parent folders until it finds one.
 
 " Vim Markdown
 let g:vim_markdown_folding_disabled=1
@@ -89,7 +96,8 @@ let g:lightline = {
 let jshint2_read = 1 " Lint files when opened
 let jshint2_save = 1 " Lint files after saving
 
-" SHORTCUTS =================================
+" quickly move between previous buffer
+nnoremap <leader>s <c-^>
 
 " Relative line numbers toggling
 function! g:ToggleNuMode() 
@@ -101,6 +109,9 @@ function! g:ToggleNuMode()
 endfunc 
 
 nnoremap <leader>l :call g:ToggleNuMode()<cr> 
+
+" Recreate tags
+map <Leader>c :!rm tags; ctags --extra=+f --exclude=.git --exclude=bower_components --exclude=log --exclude=node_modules --exclude=public -R *<CR><CR>
 
 " Quick buffer access
 nnoremap <F5> :buffers<CR>:buffer<Space>
