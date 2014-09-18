@@ -1,7 +1,10 @@
 #!/bin/bash
 
-echo "Symlinking files..."
+echo "Symlinking home folder files..."
 	source "bin/symlink-dotfiles.sh"
+
+echo "Symlinking vim snippets..."
+	source "bin/symlink-vim.sh"
 	
 echo "Symlinking Sublime Text 2..."
 	source "bin/symlink-sublimeText2.sh"

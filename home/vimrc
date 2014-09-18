@@ -31,12 +31,13 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-repeat'
+Plugin 'Valloric/YouCompleteMe'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-syntax on
+syntax enable
 
 set guifont=Source\ Code\ Pro:h12
 set noswapfile
@@ -130,4 +131,3 @@ nnoremap <leader>g :GitGutterToggle<cr>
 
 " SnipMate Extension Shortcut
 imap <C-J> <Plug>snipMateNextOrTrigger
-

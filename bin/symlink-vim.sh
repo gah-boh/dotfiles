@@ -1,14 +1,14 @@
 #!/bin/bash
 
-files="$HOME/Documents/dotfiles"
-vimSnippetsOrig="$HOME/Documents/dotfiles/vim/snippets"
+snippets="$HOME/Documents/dotfiles/vim/snippets"
 vimSnippetsToLink="$HOME/.vim/snippets"
 
 linkVimSnippets() {
 	echo "Linking vimSnippets..."
-	for location in $vimSnippetsOrig/*.*; do
+	for location in $snippets/*; do
 		file="${location##*/}"
-		link "$files/$location" "$vimSnippetsToLink/$file"
+		echo $file
+		link "$snippets/$file" "$vimSnippetsToLink/$file"
 	done
 }
 
@@ -16,7 +16,7 @@ if [[ ! -d "$vimSnippetsToLink" ]]; then
 	mkdir "$vimSnippetsToLink"
 fi
 
-if [[ -d "$vimSnippetsOrig" ]]; then
+if [[ -d "$snippets" ]]; then
 	linkVimSnippets
 else
 	echo "No Vim Snippets"
