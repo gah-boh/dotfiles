@@ -1,0 +1,26 @@
+snippet desc "BDD Describe"
+describe('$1', function() {
+	$0
+});
+endsnippet
+
+snippet it "BDD it"
+it('$1', function() {
+	$0
+});
+endsnippet
+
+snippet xit "BDD it (ignored)"
+xit('$1', function() {
+	$0
+});
+endsnippet
+
+snippet req "CommonJS Require"
+var $1 = require('$0');
+endsnippet
+
+snippet us "use strict"
+'use strict';
+endsnippet
+

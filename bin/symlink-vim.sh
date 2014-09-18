@@ -1,7 +1,7 @@
 #!/bin/bash
 
-snippets="$HOME/Documents/dotfiles/vim/snippets"
-vimSnippetsToLink="$HOME/.vim/snippets"
+snippets="$HOME/Documents/dotfiles/vim/UltiSnips"
+vimSnippetsToLink="$HOME/.vim/UltiSnips"
 
 linkVimSnippets() {
 	echo "Linking vimSnippets..."

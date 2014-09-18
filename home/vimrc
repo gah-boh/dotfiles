@@ -20,9 +20,6 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'wesQ3/vim-windowswap'
 Plugin 'Yggdroot/indentLine'
 Plugin 'tpope/vim-surround'
-Plugin 'MarcWeber/vim-addon-mw-utils' " required for vim-snipmate
-Plugin 'tomtom/tlib_vim' " required for vim-snipmate
-Plugin 'garbas/vim-snipmate'
 Plugin 'itchyny/lightline.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-commentary'
@@ -32,6 +29,7 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-repeat'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'SirVer/ultisnips'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -129,5 +127,7 @@ nnoremap <C-g> :NERDTreeToggle<CR>
 " GitGutter Toggling
 nnoremap <leader>g :GitGutterToggle<cr> 
 
-" SnipMate Extension Shortcut
-imap <C-J> <Plug>snipMateNextOrTrigger
+" UltiSnips
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsEditSplit="vertical"
+
