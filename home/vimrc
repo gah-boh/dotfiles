@@ -30,6 +30,8 @@ Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-repeat'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'SirVer/ultisnips'
+Plugin 'vim-scripts/EasyGrep'
+Plugin 'benmills/vimux'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -63,6 +65,8 @@ autocmd FileType html setlocal expandtab " Use spaces for html files
 " Wrapping
 set nowrap
 autocmd FileType markdown,mkd setlocal wrap
+
+autocmd FileType javascript setlocal suffixesadd+=.js
 
 set noerrorbells 
 set novisualbell
@@ -130,4 +134,8 @@ nnoremap <leader>g :GitGutterToggle<cr>
 " UltiSnips
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsEditSplit="vertical"
+
+" EasyGrep
+let EasyGrepCommand=1
+let g:EasyGrepFilesToExclude = "*.svn/*,*.git/*,*bower_components/*,*node_modules/*"
 
