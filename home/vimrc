@@ -37,8 +37,6 @@ Plugin 'benmills/vimux'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-syntax enable
-
 set guifont=Source\ Code\ Pro:h12
 set noswapfile
 set number
@@ -72,6 +70,11 @@ set noerrorbells
 set novisualbell
 set t_vb=
 autocmd! GUIEnter * set vb t_vb=
+
+" Solarized Plugin
+syntax enable
+set background=dark
+colorscheme solarized
 
 " gvim
 set guioptions-=r
