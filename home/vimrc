@@ -128,8 +128,9 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-" NERDTree Toggle Shortcut
+" NERDTree Shortcuts
 nnoremap <C-g> :NERDTreeToggle<CR>
+nnoremap <leader>f :NERDTreeFind<cr>
 
 " GitGutter Toggling
 nnoremap <leader>g :GitGutterToggle<cr> 
@@ -140,5 +141,5 @@ let g:UltiSnipsEditSplit="vertical"
 
 " EasyGrep
 let EasyGrepCommand=1
-let g:EasyGrepFilesToExclude = "*.svn/*,*.git/*,*bower_components/*,*node_modules/*"
+let g:EasyGrepFilesToExclude = "tags,bundle*,*.svn/*,*.git/*,*bower_components/*,*node_modules/*"
 

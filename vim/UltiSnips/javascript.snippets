@@ -1,3 +1,13 @@
+snippet us "use strict"
+'use strict';
+endsnippet
+
+snippet om "object method"
+${1:name}: function(${2:params}) {
+	$0
+},
+endsnippet
+
 snippet desc "BDD Describe"
 describe('$1', function() {
 	$0
@@ -16,8 +26,8 @@ xit('$1', function() {
 });
 endsnippet
 
-snippet us "use strict"
-'use strict';
+snippet be "BDD beforeEach"
+beforeEach($0);
 endsnippet
 
 snippet req "CommonJS Require"
