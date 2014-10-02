@@ -122,6 +122,9 @@ map <Leader>c :!rm tags; ctags --extra=+f --exclude=.git --exclude=bower_compone
 " Quick buffer access
 nnoremap <F5> :buffers<CR>:buffer<Space>
 
+" CtrlP BufferMode
+nnoremap <C-B> :CtrlPBuffer<CR>
+
 " Window Navigation Shortcuts
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
