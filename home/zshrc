@@ -53,3 +53,6 @@ export PATH=$PATH:/usr/local/git/bin:/Users/gabo-summa/.rvm/gems/ruby-1.9.2-p320
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
+# Get a higher ulimit (annoying browserify issue)
+ulimit -n 2560
+
