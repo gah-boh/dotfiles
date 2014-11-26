@@ -159,3 +159,6 @@ let g:UltiSnipsEditSplit="vertical"
 let EasyGrepCommand=1
 let g:EasyGrepFilesToExclude = "tags,bundle*,*.svn/*,*.git/*,*bower_components/*,*node_modules/*"
 
+" CtrlP
+let g:ctrlp_custom_ignore = 'node_modules\|bower_components/|DS_Store\|git'
+
