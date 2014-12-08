@@ -32,6 +32,7 @@ Plugin 'vim-scripts/EasyGrep'
 Plugin 'benmills/vimux'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'ciaranm/detectindent'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -157,6 +158,7 @@ let g:UltiSnipsEditSplit="vertical"
 
 " EasyGrep
 let EasyGrepCommand=1
+let EasyGrepRecursive=1
 let g:EasyGrepFilesToExclude = "tags,bundle*,*.svn/*,*.git/*,*bower_components/*,*node_modules/*"
 
 " CtrlP
