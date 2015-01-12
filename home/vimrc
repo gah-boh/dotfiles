@@ -33,6 +33,9 @@ Plugin 'benmills/vimux'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'ciaranm/detectindent'
+Plugin 'ZucchiniZe/vim-spider'
+Plugin 'wavded/vim-stylus'
+Plugin 'mxw/vim-jsx'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -155,6 +158,9 @@ nnoremap <leader>g :GitGutterToggle<cr>
 " UltiSnips
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsEditSplit="vertical"
+
+" JSX
+let g:jsx_ext_required = 0
 
 " EasyGrep
 let EasyGrepCommand=1
