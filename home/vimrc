@@ -58,6 +58,22 @@ set nornu " no relative line numbers as default
 set hidden
 set listchars=tab:▸\ 
 
+" remap leader
+let mapleader = "\<Space>"
+
+" General Shortcuts
+nnoremap <leader>w :w<CR>
+nnoremap <leader>q :q<CR>
+
+vmap <leader>y "+y
+vmap <leader>d "+d
+vmap <leader>p "+p
+vmap <leader>P "+P
+nmap <leader><leader> V
+
+" quickly move between previous buffer
+nnoremap <leader>s <c-^>
+
 " Indentation
 set tabstop=4
 set softtabstop=4
@@ -115,9 +131,6 @@ let g:lightline = {
 let jshint2_read = 1 " Lint files when opened
 let jshint2_save = 1 " Lint files after saving
 
-" quickly move between previous buffer
-nnoremap <leader>s <c-^>
-
 " Relative line numbers toggling
 function! g:ToggleNuMode() 
 	if(&rnu == 1) 
@@ -140,6 +153,8 @@ noremap <leader>i :IndentLinesToggle<cr>
 let g:indentLine_enabled = 0
 
 " CtrlP BufferMode
+nnoremap <leader>o :CtrlP<CR>
+nnoremap <leader>k :CtrlPBuffer<CR>
 nnoremap <C-B> :CtrlPBuffer<CR>
 
 " Window Navigation Shortcuts

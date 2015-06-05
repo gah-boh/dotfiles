@@ -56,3 +56,6 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 # Get a higher ulimit (annoying browserify issue)
 ulimit -n 2560
 
+# Disable flow control in order to get save in vim to work
+stty -ixon
+
