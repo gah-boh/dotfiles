@@ -11,10 +11,8 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'Raimondi/delimitMate'
 Plugin 'scrooloose/nerdtree'
-Plugin 'Shutnik/jshint2.vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'plasticboy/vim-markdown'
-Plugin 'altercation/vim-colors-solarized'
 Plugin 'kien/ctrlp.vim'
 Plugin 'wesQ3/vim-windowswap'
 Plugin 'Yggdroot/indentLine'
@@ -36,6 +34,8 @@ Plugin 'ciaranm/detectindent'
 Plugin 'ZucchiniZe/vim-spider'
 Plugin 'wavded/vim-stylus'
 Plugin 'mxw/vim-jsx'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'scrooloose/syntastic'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -56,6 +56,7 @@ set splitright
 set autoread
 set nornu " no relative line numbers as default
 set hidden
+set cursorline
 set listchars=tab:▸\ 
 
 " remap leader
@@ -121,15 +122,14 @@ let g:NERDTreeWinSize=40
 " GitGutter
 let g:gitgutter_enabled = 0
 
+" Syntastic Checkers
+let g:syntatstic_javascript_checkers = ['jshint']
+
 " Lightline setup
 set laststatus=2 " This will make sure it's always visible, not just on vsplits
 let g:lightline = {
       \ 'colorscheme': 'solarized_dark'
       \ }
-
-" JSHint2 settings
-let jshint2_read = 1 " Lint files when opened
-let jshint2_save = 1 " Lint files after saving
 
 " Relative line numbers toggling
 function! g:ToggleNuMode() 
