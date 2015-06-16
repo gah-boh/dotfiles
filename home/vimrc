@@ -18,7 +18,6 @@ Plugin 'wesQ3/vim-windowswap'
 Plugin 'Yggdroot/indentLine'
 Plugin 'tpope/vim-surround'
 Plugin 'itchyny/lightline.vim'
-Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-commentary'
 Plugin 'XadillaX/json-formatter.vim'
 Plugin 'tpope/vim-fugitive'
@@ -63,17 +62,17 @@ set listchars=tab:▸\
 let mapleader = "\<Space>"
 
 " General Shortcuts
-nnoremap <leader>w :w<CR>
-nnoremap <leader>q :q<CR>
+nnoremap <Leader>s :w<CR>
+nnoremap <Leader>q :q<CR>
 
-vmap <leader>y "+y
-vmap <leader>d "+d
-vmap <leader>p "+p
-vmap <leader>P "+P
-nmap <leader><leader> V
+vmap <Leader>y "+y
+vmap <Leader>d "+d
+vmap <Leader>p "+p
+vmap <Leader>P "+P
+nmap <Leader><Leader> V
 
 " quickly move between previous buffer
-nnoremap <leader>s <c-^>
+nnoremap <Leader>x <c-^>
 
 " Indentation
 set tabstop=4
@@ -87,8 +86,8 @@ function! g:ChangeTabWidth(width)
 	let &l:softtabstop=a:width
 	let &l:shiftwidth=a:width
 endfunc
-nnoremap <leader>2 :call g:ChangeTabWidth(2)<cr>
-nnoremap <leader>4 :call g:ChangeTabWidth(4)<cr>
+nnoremap <Leader>2 :call g:ChangeTabWidth(2)<cr>
+nnoremap <Leader>4 :call g:ChangeTabWidth(4)<cr>
 
 " Wrapping
 set nowrap
@@ -119,11 +118,8 @@ let g:vim_markdown_folding_disabled=1
 " NERDTree
 let g:NERDTreeWinSize=40
 
-" GitGutter
-let g:gitgutter_enabled = 0
-
 " Syntastic Checkers
-let g:syntatstic_javascript_checkers = ['jshint']
+let g:syntastic_javascript_checkers = ['jshint']
 
 " Lightline setup
 set laststatus=2 " This will make sure it's always visible, not just on vsplits
@@ -140,21 +136,24 @@ function! g:ToggleNuMode()
 	endif 
 endfunc 
 
-nnoremap <leader>l :call g:ToggleNuMode()<cr> 
+nnoremap <Leader>l :call g:ToggleNuMode()<cr> 
 
 " Recreate tags
-map <Leader>c :!rm tags; ctags --extra=+f --exclude=.git --exclude=bower_components --exclude=log --exclude=node_modules --exclude=public -R *<CR><CR>
+map <Leader>rt :!rm tags; ctags --extra=+f --exclude=.git --exclude=bower_components --exclude=log --exclude=node_modules --exclude=public -R *<CR><CR>
 
 " Quick buffer access
 nnoremap <F5> :buffers<CR>:buffer<Space>
 
 " IndentLine
-noremap <leader>i :IndentLinesToggle<cr>
+noremap <Leader>i :IndentLinesToggle<CR>
 let g:indentLine_enabled = 0
 
+" Show syntastic error window
+nnoremap <Leader>c :Errors<CR>
+
 " CtrlP BufferMode
-nnoremap <leader>o :CtrlP<CR>
-nnoremap <leader>k :CtrlPBuffer<CR>
+nnoremap <Leader>o :CtrlP<CR>
+nnoremap <Leader>bf :CtrlPBuffer<CR>
 nnoremap <C-B> :CtrlPBuffer<CR>
 
 " Window Navigation Shortcuts
@@ -165,10 +164,9 @@ nnoremap <C-H> <C-W><C-H>
 
 " NERDTree Shortcuts
 nnoremap <C-g> :NERDTreeToggle<CR>
-nnoremap <leader>f :NERDTreeFind<cr>
+nnoremap <Leader>g :NERDTreeToggle<cr> 
+nnoremap <Leader>f :NERDTreeFind<cr>
 
-" GitGutter Toggling
-nnoremap <leader>g :GitGutterToggle<cr> 
 
 " UltiSnips
 let g:UltiSnipsExpandTrigger="<c-j>"
