@@ -8,33 +8,22 @@ call vundle#begin()
 " let Vundle manage Vundle
 " required! 
 Plugin 'gmarik/Vundle.vim'
-Plugin 'pangloss/vim-javascript'
-Plugin 'Raimondi/delimitMate'
+" Plugin 'pangloss/vim-javascript'
+Plugin 'leafgarland/typescript-vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'mattn/emmet-vim'
-Plugin 'plasticboy/vim-markdown'
 Plugin 'kien/ctrlp.vim'
 Plugin 'wesQ3/vim-windowswap'
 Plugin 'Yggdroot/indentLine'
 Plugin 'tpope/vim-surround'
 Plugin 'itchyny/lightline.vim'
 Plugin 'tpope/vim-commentary'
-Plugin 'XadillaX/json-formatter.vim'
 Plugin 'tpope/vim-fugitive'
-Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-repeat'
 Plugin 'SirVer/ultisnips'
-Plugin 'vim-scripts/EasyGrep'
-Plugin 'benmills/vimux'
-Plugin 'digitaltoad/vim-jade'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'ciaranm/detectindent'
-Plugin 'ZucchiniZe/vim-spider'
-Plugin 'wavded/vim-stylus'
-Plugin 'mxw/vim-jsx'
-Plugin 'flazz/vim-colorschemes'
 Plugin 'scrooloose/syntastic'
+Plugin 'chriskempson/base16-vim'
+Plugin 'altercation/vim-colors-solarized'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -100,10 +89,10 @@ set novisualbell
 set t_vb=
 autocmd! GUIEnter * set vb t_vb=
 
-" Solarized Plugin
+" Colorscheme
 syntax enable
 set background=dark
-colorscheme solarized
+colorscheme base16-default
 
 " gvim
 set guioptions-=r
@@ -119,7 +108,7 @@ let g:vim_markdown_folding_disabled=1
 let g:NERDTreeWinSize=40
 
 " Syntastic Checkers
-let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_javascript_checkers = ['eslint']
 
 " Lightline setup
 set laststatus=2 " This will make sure it's always visible, not just on vsplits
@@ -175,11 +164,5 @@ let g:UltiSnipsEditSplit="vertical"
 " JSX
 let g:jsx_ext_required = 0
 
-" EasyGrep
-let EasyGrepCommand=1
-let EasyGrepRecursive=1
-let g:EasyGrepFilesToExclude = "tags,bundle*,*.svn/*,*.git/*,*bower_components/*,*node_modules/*"
-
 " CtrlP
-let g:ctrlp_custom_ignore = 'node_modules\|bower_components/|DS_Store\|git'
-
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.idea/*,*/.DS_Store,*/vendor,*/node_modules/*,*/bower_components/*,*/dist/*

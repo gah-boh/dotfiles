@@ -11,6 +11,7 @@ ZSH_THEME="bureau"
 alias zshconfig="vim ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias hglog="hg log | less"
+alias py="python"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -59,3 +60,12 @@ ulimit -n 2560
 # Disable flow control in order to get save in vim to work
 stty -ixon
 
+# Start pyenv
+eval "$(pyenv init -)"
+
+# Start pyenv virtualenv
+# if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
+
+
+export NVM_DIR="/Users/gabo/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
