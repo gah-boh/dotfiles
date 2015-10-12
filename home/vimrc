@@ -8,7 +8,7 @@ call vundle#begin()
 " let Vundle manage Vundle
 " required! 
 Plugin 'gmarik/Vundle.vim'
-" Plugin 'pangloss/vim-javascript'
+Plugin 'pangloss/vim-javascript'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
@@ -26,6 +26,7 @@ Plugin 'chriskempson/base16-vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'mxw/vim-jsx'
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'moll/vim-bbye'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -94,6 +95,7 @@ autocmd! GUIEnter * set vb t_vb=
 " Colorscheme
 syntax enable
 set background=dark
+let base16colorspace=256
 colorscheme base16-default
 
 " gvim
@@ -114,9 +116,6 @@ let g:syntastic_javascript_checkers = ['eslint']
 
 " Lightline setup
 set laststatus=2 " This will make sure it's always visible, not just on vsplits
-let g:lightline = {
-      \ 'colorscheme': 'solarized_dark'
-      \ }
 
 " Relative line numbers toggling
 function! g:ToggleNuMode() 
@@ -158,6 +157,8 @@ nnoremap <C-g> :NERDTreeToggle<CR>
 nnoremap <Leader>g :NERDTreeToggle<cr> 
 nnoremap <Leader>f :NERDTreeFind<cr>
 
+" vim bbye
+nnoremap <Leader>bd :Bdelete<CR>
 
 " UltiSnips
 let g:UltiSnipsExpandTrigger="<c-j>"

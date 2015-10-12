@@ -6,9 +6,6 @@ echo "Symlinking home folder files..."
 echo "Symlinking vim snippets..."
 	source "bin/symlink-vim.sh"
 	
-echo "Symlinking Sublime Text 2..."
-	source "bin/symlink-sublimeText2.sh"
-	
 echo "Symlinking Sublime Text 3..."
 	source "bin/symlink-sublimeText3.sh"
 	
