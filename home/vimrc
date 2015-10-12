@@ -40,6 +40,7 @@ set backspace=indent,eol,start
 set history=500
 set ruler
 set autoindent
+set smartindent
 set noexpandtab
 set smarttab
 set showmatch
@@ -112,7 +113,11 @@ let g:vim_markdown_folding_disabled=1
 let g:NERDTreeWinSize=40
 
 " Syntastic Checkers
+function! StrTrim(txt)
+    return substitute(a:txt, '^\n*\s*\(.\{-}\)\n*\s*$', '\1', '')
+endfunction
 let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_eslint_exex = StrTrim(system('npm-which eslint'))
 
 " Lightline setup
 set laststatus=2 " This will make sure it's always visible, not just on vsplits
