@@ -67,14 +67,8 @@ BASE16_SHELL="$HOME/.config/base16-shell/base16-default.dark.sh"
 export NVM_DIR="/Users/gabo/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-# pip should only run if there is a virtualenv currently activated
-export PIP_REQUIRE_VIRTUALENV=true
-# gpip is to install python packages globally
-gpip(){
-    PIP_REQUIRE_VIRTUALENV="" pip "$@"
-}
-
 # pyenv
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
+export PYENV_ROOT=/usr/local/var/pyenv
 
