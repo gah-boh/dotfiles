@@ -17,41 +17,41 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'tpope/vim-surround'
 Plugin 'itchyny/lightline.vim'
 Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-repeat'
-Plugin 'SirVer/ultisnips'
+" Plugin 'SirVer/ultisnips'
 Plugin 'scrooloose/syntastic'
 Plugin 'chriskempson/base16-vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'mxw/vim-jsx'
-Plugin 'jiangmiao/auto-pairs'
 Plugin 'moll/vim-bbye'
+Plugin 'editorconfig/editorconfig-vim'
+Plugin 'fatih/vim-go'
+Plugin 'mileszs/ack.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-set guifont=Source\ Code\ Pro:h12
 set noswapfile
 set number
-set nocompatible
 set backspace=indent,eol,start
 set history=500
 set ruler
 set autoindent
-set smartindent
-set noexpandtab
 set smarttab
 set showmatch
 set splitright
 set autoread
-set nornu " no relative line numbers as default
+set rnu " set relative line numbers as default
 set hidden
 set cursorline
 set listchars=tab:▸\ 
 
-" remap leader
+" Avoiding delay when quickly pressing Shift + O
+set timeout timeoutlen=5000 ttimeoutlen=100
+
+" remap leader to space
 let mapleader = "\<Space>"
 
 " General Shortcuts
@@ -88,7 +88,7 @@ autocmd FileType markdown,mkd setlocal wrap
 
 autocmd FileType javascript setlocal suffixesadd+=.js
 
-set noerrorbells 
+set noerrorbells
 set novisualbell
 set t_vb=
 autocmd! GUIEnter * set vb t_vb=
@@ -112,6 +112,20 @@ let g:vim_markdown_folding_disabled=1
 " NERDTree
 let g:NERDTreeWinSize=40
 
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 0
+let g:syntastic_auto_loc_list = 2
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 0
+
+" Show syntastic error window
+nnoremap <Leader>e :Errors<CR>
+nnoremap <Leader>c :SyntasticCheck<CR>
+
 " Syntastic Checkers
 function! StrTrim(txt)
     return substitute(a:txt, '^\n*\s*\(.\{-}\)\n*\s*$', '\1', '')
@@ -133,18 +147,12 @@ endfunc
 
 nnoremap <Leader>l :call g:ToggleNuMode()<cr> 
 
-" Recreate tags
-map <Leader>rt :!rm tags; ctags --extra=+f --exclude=.git --exclude=bower_components --exclude=log --exclude=node_modules --exclude=public -R *<CR><CR>
-
 " Quick buffer access
 nnoremap <F5> :buffers<CR>:buffer<Space>
 
 " IndentLine
 noremap <Leader>i :IndentLinesToggle<CR>
 let g:indentLine_enabled = 0
-
-" Show syntastic error window
-nnoremap <Leader>c :Errors<CR>
 
 " CtrlP BufferMode
 nnoremap <Leader>o :CtrlP<CR>
@@ -165,12 +173,11 @@ nnoremap <Leader>f :NERDTreeFind<cr>
 " vim bbye
 nnoremap <Leader>bd :Bdelete<CR>
 
-" UltiSnips
-let g:UltiSnipsExpandTrigger="<c-j>"
-let g:UltiSnipsEditSplit="vertical"
-
 " JSX
 let g:jsx_ext_required = 0
 
 " CtrlP
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.idea/*,*/.DS_Store,*/vendor,*/node_modules/*,*/bower_components/*,*/dist/*
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.idea/*,*/.DS_Store,*/vendor,*/node_modules/*,*/bower_components/*,*/dist/*,*/build/*,*/bundle.js,*/bundle.js.map
+
+" Use the silver searcher instead of ack
+let g:ackprg = 'ag --nogroup --nocolor --column'
