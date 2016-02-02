@@ -28,6 +28,7 @@ Plugin 'moll/vim-bbye'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'fatih/vim-go'
 Plugin 'mileszs/ack.vim'
+Plugin 'digitaltoad/vim-jade'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -96,7 +97,6 @@ autocmd! GUIEnter * set vb t_vb=
 " Colorscheme
 syntax enable
 set background=dark
-let base16colorspace=256
 colorscheme base16-default
 
 " gvim
