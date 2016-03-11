@@ -46,24 +46,13 @@ plugins=(git mercurial sublime zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
-#Source rvm script
-source ~/.rvm/scripts/rvm
-
-# Customize to your needs...
-export PATH=$PATH:/usr/local/git/bin:/Users/gabo-summa/.rvm/gems/ruby-1.9.2-p320/bin:/Users/gabo-summa/.rvm/gems/ruby-1.9.2-p320@global/bin:/Users/gabo-summa/.rvm/rubies/ruby-1.9.2-p320/bin:/Users/gabo-summa/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
-# Disable flow control in order to get save in vim to work
-stty -ixon
-
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # pyenv
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
-export PYENV_ROOT=/usr/local/var/pyenv
+# export PYENV_ROOT=/usr/local/var/pyenv
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 
 # gvm
@@ -71,3 +60,12 @@ export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 
 # the dockers
 alias docker-dev='eval "$(docker-machine env dev)"'
+
+# Load RVM into a shell session *as a function*
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" 
+
+# Customize to your needs...
+# export PATH=$PATH:/usr/local/git/bin:/Users/gabo-summa/.rvm/gems/ruby-1.9.2-p320/bin:/Users/gabo-summa/.rvm/gems/ruby-1.9.2-p320@global/bin:/Users/gabo-summa/.rvm/rubies/ruby-1.9.2-p320/bin:/Users/gabo-summa/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
+
+# PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
