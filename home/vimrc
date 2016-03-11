@@ -132,6 +132,7 @@ function! StrTrim(txt)
 endfunction
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_javascript_eslint_exec = StrTrim(system('npm-which eslint'))
+let g:syntastic_mode_map = { 'passive_filetypes': ['html'] }
 
 " Lightline setup
 set laststatus=2 " This will make sure it's always visible, not just on vsplits
