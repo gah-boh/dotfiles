@@ -1,0 +1,25 @@
+# Aliases
+alias zshconfig="vim ~/.zshrc_gabo"
+alias py="python"
+alias docker-dev='eval "$(docker-machine env dev)"'
+
+# nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# pyenv
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
+# export PYENV_ROOT=/usr/local/var/pyenv
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+
+# gvm
+[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
+
+# Load RVM into a shell session *as a function*
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" 
+
+# Customize to your needs...
+# export PATH=$PATH:/usr/local/git/bin:/Users/gabo-summa/.rvm/gems/ruby-1.9.2-p320/bin:/Users/gabo-summa/.rvm/gems/ruby-1.9.2-p320@global/bin:/Users/gabo-summa/.rvm/rubies/ruby-1.9.2-p320/bin:/Users/gabo-summa/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
+
+# PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
