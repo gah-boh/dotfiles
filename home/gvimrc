@@ -1,4 +1,9 @@
-" set highlight CursorLineNr guifg=#839496
+" gvim
+set guioptions-=r
+set guioptions-=T
+set go-=L
+
 highlight CursorLineNr guifg=#839496
 set guifont=Source\ Code\ Pro:h12
 
+set guifont=Source\ Code\ Pro:h12

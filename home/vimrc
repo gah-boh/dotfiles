@@ -96,11 +96,6 @@ syntax enable
 set background=dark
 colorscheme base16-default
 
-" gvim
-set guioptions-=r
-set guioptions-=T
-set go-=L
-
 set tags=tags;/ " Recursively search for a tag file in parent folders until it finds one.
 
 " Vim Markdown
