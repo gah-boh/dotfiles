@@ -3,6 +3,9 @@ alias zshconfig="vim ~/.zshrc_gabo"
 alias py="python"
 alias docker-dev='eval "$(docker-machine env dev)"'
 
+# zsh-completions
+fpath=(/usr/local/share/zsh-completions $fpath)
+
 # nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

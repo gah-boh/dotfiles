@@ -1,3 +1,4 @@
 " set highlight CursorLineNr guifg=#839496
 highlight CursorLineNr guifg=#839496
+set guifont=Source\ Code\ Pro:h12
 
