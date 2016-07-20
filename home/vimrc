@@ -29,6 +29,7 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'fatih/vim-go'
 Plugin 'mileszs/ack.vim'
 Plugin 'digitaltoad/vim-jade'
+Plugin 'jiangmiao/auto-pairs'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -94,7 +95,7 @@ autocmd! GUIEnter * set vb t_vb=
 " Colorscheme
 syntax enable
 set background=dark
-colorscheme base16-default
+colorscheme base16-default-dark
 
 set tags=tags;/ " Recursively search for a tag file in parent folders until it finds one.
 
