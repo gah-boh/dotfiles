@@ -30,6 +30,7 @@ Plugin 'fatih/vim-go'
 Plugin 'mileszs/ack.vim'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'junegunn/fzf'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -66,6 +67,8 @@ nmap <Leader><Leader> V
 " quickly move between previous buffer
 nnoremap <Leader>x <c-^>
 
+nnoremap <Leader>/ /\V
+
 " Indentation
 set tabstop=4
 set softtabstop=4
@@ -85,7 +88,7 @@ nnoremap <Leader>4 :call g:ChangeTabWidth(4)<cr>
 set nowrap
 autocmd FileType markdown,mkd setlocal wrap
 
-autocmd FileType javascript setlocal suffixesadd+=.js
+autocmd FileType javascript setlocal suffixesadd+=.js,.json
 
 set noerrorbells
 set novisualbell
