@@ -1,0 +1,1 @@
+git diff ~/Documents/dotfiles/home/.zshrc ~/.zshrc

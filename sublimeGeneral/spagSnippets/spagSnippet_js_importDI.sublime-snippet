@@ -1,9 +1,0 @@
-<snippet>
-	<content><![CDATA[
-${1:ImportName} = ${1:ImportName} !== undefined ? ${1:ImportName} : require('./${2:Import}');
-]]></content>
-	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>import</tabTrigger>
-	<!-- Optional: Set a scope to limit where the snippet will trigger -->
-	<scope>source.js</scope>
-</snippet>
