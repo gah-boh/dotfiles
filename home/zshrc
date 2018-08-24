@@ -4,7 +4,7 @@
 DEFAULT_USER=`whoami`
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/gobregon/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Powerline
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
