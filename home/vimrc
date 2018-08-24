@@ -158,10 +158,10 @@ nnoremap <Leader>b :CtrlPBuffer<CR>
 nnoremap <C-B> :CtrlPBuffer<CR>
 
 " Window Navigation Shortcuts
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
+nnoremap <C-J> <C-w>j
+nnoremap <C-K> <C-w>k
+nnoremap <C-L> <C-w>l
+nnoremap <C-H> <C-w>h
 
 " NERDTree Shortcuts
 nnoremap <C-g> :NERDTreeToggle<CR>
