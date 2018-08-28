@@ -30,7 +30,7 @@ POWERLEVEL9K_BATTERY_CHARGING_BACKGROUND='178'
 POWERLEVEL9K_BATTERY_CHARGING_FOREGROUND='235'
 POWERLEVEL9K_BATTERY_LOW_BACKGROUND='88'
 POWERLEVEL9K_BATTERY_LOW_FOREGROUND='235'
-# POWERLEVEL9K_BATTERY_VERBOSE=false
+POWERLEVEL9K_BATTERY_VERBOSE=false
 # POWERLEVEL9K_BATTERY_CHARGING_FOREGROUND="black"
 # POWERLEVEL9K_BATTERY_CHARGED_FOREGROUND="black"
 # POWERLEVEL9K_BATTERY_LEVEL_BACKGROUND=(darkred orange4 yellow4 yellow4 chartreuse3 green3 green4 darkgreen)
@@ -138,8 +138,9 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+alias zshconfig="vi ~/.zshrc"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
