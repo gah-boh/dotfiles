@@ -5,6 +5,7 @@ let mapleader=" "
 nnoremap <Leader>s :action SaveAll<CR>
 nnoremap <Leader>d :action CloseEditor<CR>
 nnoremap <Leader>o :action GotoFile<CR>
+nnoremap <Leader>f :action SelectInProjectView<CR>
 
 " Window Navigation Shortcuts
 nnoremap <c-j> <c-w>j

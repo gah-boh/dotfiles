@@ -44,12 +44,16 @@ POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""
 POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="\uf6f6 "
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 
-POWERLEVEL9K_MODE='nerdfont-complete'
+SPACESHIP_CHAR_SYMBOL="\uf6f6"
+SPACESHIP_CHAR_SUFFIX=" "
+SPACESHIP_VI_MODE_INSERT="\ue62b"
+SPACESHIP_VI_MODE_NORMAL="\ufaa5"
+SPACESHIP_VI_MODE_COLOR="green"
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME="spaceship-prompt/spaceship"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -142,6 +146,8 @@ source $ZSH/oh-my-zsh.sh
 
 alias zshconfig="vi ~/.zshrc"
 
+export LESS='--no-init --quit-if-one-screen --ignore-case --status-column --LONG-PROMPT --RAW-CONTROL-CHARS --HILITE-UNREAD --tabs=4 --window=4'
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
@@ -170,7 +176,8 @@ load-nvmrc
 
 if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
