@@ -7,6 +7,8 @@ Manual Requirements:
 - iterm
 - freeCodeCamp iterm theme https://github.com/ryanwhocodes/powerlevel9k-freeCodeCamp/blob/master/freeCodeCamp.itermcolors
 - zsh via homebrew (remember to run `chsh -s /bin/zsh`)
+- zsh-autosuggestions https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md
+- fzf (via homebrew) https://github.com/junegunn/fzf
 - oh-my-zsh
 - Spaceship https://github.com/denysdovhan/spaceship-prompt
 - Install nerd fonts

@@ -50,6 +50,8 @@ SPACESHIP_VI_MODE_INSERT="\ue62b"
 SPACESHIP_VI_MODE_NORMAL="\ufaa5"
 SPACESHIP_VI_MODE_COLOR="green"
 
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=3'
+
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
@@ -112,6 +114,8 @@ plugins=(
   osx
   vi-mode
   colorize
+  docker-compose
+  zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -145,6 +149,8 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias zshconfig="vi ~/.zshrc"
+
+export HOMEBREW_EDITOR="vim"
 
 export LESS='--no-init --quit-if-one-screen --ignore-case --status-column --LONG-PROMPT --RAW-CONTROL-CHARS --HILITE-UNREAD --tabs=4 --window=4'
 
@@ -183,3 +189,4 @@ eval $(thefuck --alias)
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
