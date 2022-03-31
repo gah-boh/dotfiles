@@ -21,7 +21,6 @@ Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-repeat'
 " Plugin 'SirVer/ultisnips'
 Plugin 'scrooloose/syntastic'
-Plugin 'chriskempson/base16-vim'
 Plugin 'mxw/vim-jsx'
 Plugin 'moll/vim-bbye'
 Plugin 'editorconfig/editorconfig-vim'
@@ -30,6 +29,7 @@ Plugin 'digitaltoad/vim-jade'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'junegunn/fzf'
 Plugin 'dracula/vim'
+Plugin 'rafi/awesome-vim-colorschemes'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -47,7 +47,6 @@ set splitright
 set autoread
 set rnu " set relative line numbers as default
 set hidden
-set cursorline
 set listchars=tab:▸\ 
 
 " Avoiding delay when quickly pressing Shift + O
@@ -95,11 +94,10 @@ set t_vb=
 autocmd! GUIEnter * set vb t_vb=
 
 " Colorscheme
-" syntax enable
+syntax enable
 " set background=dark
-" colorscheme base16-default-dark
-syntax on
-color dracula
+" set t_Co=256
+colorscheme abstract
 
 set tags=tags;/ " Recursively search for a tag file in parent folders until it finds one.
 
@@ -132,6 +130,9 @@ let g:syntastic_javascript_eslint_exec = StrTrim(system('npm-which eslint'))
 let g:syntastic_mode_map = { 'passive_filetypes': ['html'] }
 
 " Lightline setup
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ }
 set laststatus=2 " This will make sure it's always visible, not just on vsplits
 
 " Relative line numbers toggling

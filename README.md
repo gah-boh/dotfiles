@@ -9,7 +9,9 @@ Manual Requirements:
 - zsh via homebrew (remember to run `chsh -s /bin/zsh`)
 - zsh-autosuggestions https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md
 - fzf (via homebrew) https://github.com/junegunn/fzf
+- mcfly https://github.com/cantino/mcfly
 - oh-my-zsh
+- fd (brew install fd)
 - Spaceship https://github.com/denysdovhan/spaceship-prompt
 - Install nerd fonts
 - Vundle `git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
